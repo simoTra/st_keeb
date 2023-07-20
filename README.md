@@ -2,21 +2,9 @@
 
 ## Handwired Keyboard
 
-This handwired keyboard has a unique design with a plasma cutted inox frame and a 3d printed split plate. It uses m3 screws and brass insterts for 3d printed parts to ensure durability and stability. The microcontroller is an arduino pro micro and the switches are Gateron yellow pro, high-quality switches that provide an excellent typing experience.
+<img src="images/final.jpeg" alt="final"/>
 
-## Features
-
-- Plasma cutted inox frame
-
-- 3d printed split plate
-
-- Gateron yellow pro switches
-
-- Arduino pro micro microcontroller
-
-## Design and Assembly
-
-The design of this keyboard reflects the perfect combination of both the aesthetics and functionality. The keyboard has a sleek, modern design with a plasma cutted inox frame that is both durable and aesthetically pleasing. The frame is sanded in order to have glossy finish, which provides a unique look.
+This handwired keyboard has a unique design with a plasma cutted inox frame and a 3d printed split plate, it reflects the perfect combination of both the aesthetics and functionality. The keyboard has a sleek, modern design with a plasma cutted inox base that is both durable and aesthetically pleasing. The frame is sanded in order to have glossy finish, which provides a unique look.
 
 The 3d printed split plate is designed to ensure that each switch is positioned correctly and to prevent any rattling of the switches during typing. The plate is made with high-quality PETG and is designed to last. The brass inserts used in the 3d printed parts ensure that the screws are held securely in place.
 
@@ -30,15 +18,65 @@ The switches used in this keyboard are Gateron yellow pro switches. These switch
 
 ## BOM
 
-todo
+- 1x Plasma cutted inox frame (also 3d printable)
 
-## Matrix scheme
+- 1x 3d printed split plate
 
-todo
+- 1x Arduino pro micro (or ATMega 32u4 compatible microcontroller)
 
-## Photos and renders
+- 67x Gateron yellow pro switch
 
-todo
+- 67x 1N4148 diod
+
+- 8x M3 screw
+
+- 8x M3x4mm brass insert
+
+## Layout and Matrix scheme
+
+![layout](images/layout.png)
+
+The matrix configuration is peculiar but functional. This has been done to facilitate assembly operations.
+<a href="https://golem.hu/guide/pro-micro-upgrade/"> 
+ Must follow this guide in order to use the led pin as input for the matrix.
+</a>
+![matrix scheme](images/matrixScheme.png)
+![pinout](images/pinout.png)
+
+## Photos
+
+| Orbital Sanding | Printed Part | Final Without Base |
+| :----------------------------: | :-------------------------------------: | :------------------------------------------------------------------------: |
+| <img src="images/orbitalSanding.jpg" alt="orbital sanding"/> | <img src="images/printedPart.jpg" alt="printed part" /> | <img src="images/finalWithoutBase.jpg" alt="final without base" />|
+
+
+| Back | Microcontroller | Matrix |
+| :----------------------------: | :-------------------------------------: | :------------------------------------------------------------------------: |
+| <img src="images/back.jpeg" alt="back"/> | <img src="images/microcontroller.jpeg" alt="microcontroller" /> | <img src="images/matrix.jpeg" alt="matrix" />|
+
+
+| Final | 
+| :----------------------------: |
+| <img src="images/final.jpeg" alt="final"/> |
+## Repo structure
+
+```text
+ST_KEEB
+    ├── 3d Files
+    │   ├── plateLeft.stl
+    │   ├── plateRight.stl
+    │   ├── st-keeb-base.dxf
+    │   ├── st-keeb-base.pdf
+    │   ├── st-keeb-base.stl
+    │   └── st-keeb-baseWithHoles.stl
+    ├── README.md
+    ├── images
+    │   ├── ...
+    ├── st-keeb-kle.json -> keyboard layout editor config
+    ├── st-keeb.hex -> precompiled firmware for ATMega32u4
+    ├── st-keeb.json -> kbfirmware config
+    └── st-keeb.zip -> kbfirmware config
+```
 
 ## Conclusion
 
